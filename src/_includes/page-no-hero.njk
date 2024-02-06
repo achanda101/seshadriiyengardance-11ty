@@ -1,0 +1,53 @@
+---
+layout: base.njk
+homePage: false
+noHero: true
+---
+
+<span id="innerPage" style="visibility: hidden"></span>
+<span id="noHero" style="visibility: hidden"></span>
+
+<main>
+  {{ content | safe }}
+</main>
+
+{% if carousels %}
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  var flktyElemList = document.querySelectorAll(".flick-carousel");
+  if (flktyElemList) {
+    flktyElemList.forEach((flktyElem) => {
+      var stdFlktyObj = new Flickity(flktyElem);
+      // This avoids FOUC -- flash of unstyled content
+      flktyElem.style.opacity = 1.0;
+    });
+  }
+</script>
+{% endif %} {% if modals %}
+<script>
+  document.querySelectorAll(".open-modal").forEach((modalLink) => {
+    modalLink.addEventListener("click", (e) => {
+      // prevent normal click behavior
+      e.preventDefault();
+      const modalToggle = e.target.closest(".open-modal");
+      if (!modalToggle) return;
+
+      const modal = modalToggle.parentNode.nextElementSibling;
+
+      if (modal.classList.contains("modal--container")) {
+        modal.classList.add("is-open");
+        modal.style.animation = "modalFadeIn 500ms forwards";
+        document.body.style.overflowY = "hidden";
+
+        const closeButton = modal.querySelector(".modal--close");
+        if (closeButton) {
+          closeButton.addEventListener("click", (_) => {
+            modal.classList.remove("is-open");
+            document.body.style.overflowY = "scroll";
+          });
+        }
+      }
+    });
+  });
+</script>
+{% endif %}

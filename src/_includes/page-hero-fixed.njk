@@ -1,0 +1,250 @@
+---
+layout: base.njk
+homePage: false
+noHero: false
+---
+
+<span id="innerPage" style="visibility: hidden"></span>
+{% if heroType == "image" %}
+  <div
+  class="hero-image"
+  data-hero-image-desk="{{ heroDesk }}"
+  data-hero-image-tablet="{{ heroTab }}"
+  data-hero-image-mobile="{{ heroMob }}"
+  data-hero-image-webp-desk="{{ heroDeskWebp }}"
+  data-hero-image-webp-tablet="{{ heroTabWebp }}"
+  data-hero-image-webp-mobile="{{ heroMobWebp }}"
+  alt="hero image description"
+>
+    <div class="hero--content">
+      {% if heroText %}
+        <div class="hero--text">{{ heroText }}</div>
+      {% endif %}
+      {% if heroTagline %}
+        <div class="hero--tagline">{{ heroTagline }}</div>
+      {% endif %}
+      {% if heroDeskCredit and heroTabCredit and heroMobCredit %}
+        <div
+      class="hero--credit"
+      data-hero-credit-desk="{{ heroDeskCredit }}"
+      data-hero-credit-tablet="{{ heroTabCredit }}"
+      data-hero-credit-mobile="{{ heroMobCredit }}"
+    ></div>
+      {% endif %}
+    </div>
+  </div>
+  <script>
+    // Responsive Banner Image
+    var heroImage = document.getElementsByClassName("hero-image")[0];
+    var heroCredit = document.getElementsByClassName("hero--credit")[0];
+    var hasWebp = false;
+
+    if (Modernizr.webp) {
+      // console.log("webp supported");
+      hasWebp = true;
+    } else {
+      // console.log("webp not supported");
+      hasWebp = false;
+    }
+
+    if (heroImage) {
+      if (window.innerWidth > 1199) {
+        heroImage.style.backgroundImage = hasWebp
+          ? heroImage.dataset.heroImageWebpDesk
+          : heroImage.dataset.heroImageDesk;
+      } else if (window.innerWidth > 599) {
+        heroImage.style.backgroundImage = hasWebp
+          ? heroImage.dataset.heroImageWebpTablet
+          : heroImage.dataset.heroImageTablet;
+      } else {
+        heroImage.style.backgroundImage = hasWebp
+          ? heroImage.dataset.heroImageWebpMobile
+          : heroImage.dataset.heroImageMobile;
+      }
+    }
+    if (heroCredit) {
+      if (window.innerWidth > 1199) {
+        heroCredit.innerHTML = "Photo - " + heroCredit.dataset.heroCreditDesk;
+      } else if (window.innerWidth > 599) {
+        heroCredit.innerHTML = "Photo - " + heroCredit.dataset.heroCreditTablet;
+      } else {
+        heroCredit.innerHTML = "Photo - " + heroCredit.dataset.heroCreditMobile;
+      }
+    }
+
+    // GSAP timeline for bringing in the overlaid content on the banner image
+    var heroContent = document.getElementsByClassName("hero--content")[0];
+    var heroText = document.getElementsByClassName("hero--text")[0];
+    var heroTagline = document.getElementsByClassName("hero--tagline")[0];
+    var heroButtonList = document.getElementsByClassName("hero--buttons")[0];
+    if (heroContent && heroText) {
+      let tl = gsap.timeline();
+      tl.from(heroContent, {autoAlpha: 0});
+      // insert exactly 0 seconds from the start of the timeline
+      tl.fromTo(heroText, {
+        alpha: 0
+      }, {
+        duration: 2,
+        alpha: 1
+      }, 0);
+
+      if (heroTagline) {
+        // insert at the END of the previous animation
+        tl.fromTo(heroTagline, {
+          y: -30,
+          alpha: 0
+        }, {
+          duration: 2,
+          y: 0,
+          alpha: 1
+        }, ">");
+      }
+      if (heroButtonList) {
+        tl.fromTo(heroButtonList, {
+          alpha: 0
+        }, {
+          duration: 1,
+          alpha: 1
+        });
+      }
+    }
+  </script>
+{% endif %}
+{% if heroType == "video" %}
+  <div class="hero-video">
+    <div class="hero-video--content inner-page">
+      {% if heroText %}
+        <div class="hero-video--text">{{ heroText }}</div>
+      {% endif %}
+      {% if heroTagline %}
+        <div class="hero-video--tagline">{{ heroTagline }}</div>
+      {% endif %}
+    </div>
+    <div class="volume-icon">
+      <i class="fas fa-volume-mute"></i>
+    </div>
+    <!-- <video src="{{ heroVideo }}" muted loop autoplay id="heroVideo"></video> -->
+    <video muted loop autoplay id="heroVideo">
+      <source id="webm_src" src="{{ heroVideo }}" type="video/webm" />
+      <source id="mp4_src" src="{{ heroVideoMP4 }}" type="video/mp4" />
+    </video>
+  </div>
+  <script>
+    var heroVideo = document.getElementById("heroVideo");
+    var heroVideoContent = document.getElementsByClassName("hero-video--content")[0];
+    var heroVideoText = document.getElementsByClassName("hero-video--text")[0];
+    var heroVideoTagline = document.getElementsByClassName("hero-video--tagline")[0];
+
+    window.addEventListener("load", function () {
+      if (heroVideoText) {
+        let tl = gsap.timeline();
+
+        tl.from(heroVideoContent, {autoAlpha: 0});
+        // insert exactly 0 seconds from the start of the timeline
+        tl.fromTo(heroVideoText, {
+          alpha: 0
+        }, {
+          duration: 2,
+          alpha: 1
+        }, 0);
+        // insert at the END of the previous animation
+        if (heroVideoTagline) {
+          tl.fromTo(heroVideoTagline, {
+            y: -30,
+            alpha: 0
+          }, {
+            duration: 2,
+            y: 0,
+            alpha: 1
+          }, ">");
+        }
+      }
+    }, false);
+  </script>
+{% endif %}
+
+<main>
+  {{ content | safe }}
+</main>
+
+{% if heroType == "slider" %}
+  <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
+  <script>
+    var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
+    if (vanillaSlideshow) {
+      vanillaSlideshow.init({
+        // auto slideshow, options: true or false
+        slideshow: true,
+        // slideshow delay
+        delay: 3000,
+        // display arrows, options: true or false
+        arrows: true,
+        // display indicators, options: true or false
+        indicators: false,
+        // start slideshow randomly, options: true or false
+        random: false,
+        // animation speed
+        animationSpeed: "1.75s"
+      });
+    }
+  </script>
+{% endif %}
+{% if carousels %}
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script>
+    var flktyElemList = document.querySelectorAll(".flick-carousel");
+    if (flktyElemList) {
+      flktyElemList.forEach((flktyElem) => {
+        var stdFlktyObj = new Flickity(flktyElem);
+        // This avoids FOUC -- flash of unstyled content
+        flktyElem.style.opacity = 1.0;
+      });
+    }
+  </script>
+{% endif %}
+{% if modals %}
+  <script>
+    document
+      .querySelectorAll(".open-modal")
+      .forEach((modalLink) => {
+        modalLink.addEventListener("click", (e) => {
+          // prevent normal click behavior
+          e.preventDefault();
+          const modalToggle = e
+            .target
+            .closest(".open-modal");
+          if (!modalToggle) 
+            return;
+          
+          const modal = modalToggle.parentNode.nextElementSibling;
+          var heroContent = document.querySelector(".hero--content");
+          if (!heroContent) 
+            heroContent = document.querySelector(".hero-video--content");
+          
+          if (modal.classList.contains("modal--container")) {
+            modal
+              .classList
+              .add("is-open");
+            modal.style.animation = "modalFadeIn 500ms forwards";
+            heroContent
+              .classList
+              .add("is-hidden");
+            document.body.style.overflowY = "hidden";
+
+            const closeButton = modal.querySelector(".modal--close");
+            if (closeButton) {
+              closeButton.addEventListener("click", (_) => {
+                modal
+                  .classList
+                  .remove("is-open");
+                heroContent
+                  .classList
+                  .remove("is-hidden");
+                document.body.style.overflowY = "scroll";
+              });
+            }
+          }
+        });
+      });
+  </script>
+{% endif %}

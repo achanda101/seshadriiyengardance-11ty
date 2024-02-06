@@ -1,0 +1,270 @@
+---
+layout: base.njk
+homePage: true
+noHero: false
+---
+
+{% if heroType == "image" %}
+<div
+  class="hero-image"
+  data-hero-image-desk="{{ heroDesk }}"
+  data-hero-image-tablet="{{ heroTab }}"
+  data-hero-image-mobile="{{ heroMob }}"
+  alt="hero image description"
+>
+  <div class="hero--content">
+    <div class="hero--text">{{ heroText }}</div>
+    {% if heroTagline %}
+    <div class="hero--tagline">{{ heroTagline }}</div>
+    {% endif %} {% if heroDeskCredit and heroTabCredit and heroMobCredit %}
+    <div
+      class="hero--credit"
+      data-hero-credit-desk="{{ heroDeskCredit }}"
+      data-hero-credit-tablet="{{ heroTabCredit }}"
+      data-hero-credit-mobile="{{ heroMobCredit }}"
+    ></div>
+    {% endif %}
+  </div>
+</div>
+{% endif %} {% if heroType == "slider" %}
+<div id="vanilla-slideshow-container">
+  <div id="vanilla-slideshow">
+    <div class="vanilla-slide">
+      <picture>
+        <source
+          srcset="{{ heroSliderImgDesk1 | url }}"
+          media="(min-width: 1000px)"
+        />
+        <source
+          srcset="{{ heroSliderImgTablet1 | url }}"
+          media="(min-width: 600px)"
+        />
+        <img
+          src="{{ heroSliderImgMobile1 | url }}"
+          alt="slide 2"
+          height="auto"
+        />
+      </picture>
+      <div class="home-credit">{{ heroSliderImgCredit1 }}</div>
+    </div>
+
+    <div class="vanilla-slide">
+      <picture>
+        <source
+          srcset="{{ heroSliderImgDesk2 | url }}"
+          media="(min-width: 1000px)"
+        />
+        <source
+          srcset="{{ heroSliderImgTablet2 | url }}"
+          media="(min-width: 600px)"
+        />
+        <img
+          src="{{ heroSliderImgMobile2 | url }}"
+          alt="slide 2"
+          height="auto"
+        />
+      </picture>
+      <div class="home-credit">{{ heroSliderImgCredit2 }}</div>
+    </div>
+
+    <div class="vanilla-slide">
+      <picture>
+        <source
+          srcset="{{ heroSliderImgDesk3 | url }}"
+          media="(min-width: 1000px)"
+        />
+        <source
+          srcset="{{ heroSliderImgTablet3 | url }}"
+          media="(min-width: 600px)"
+        />
+        <img
+          src="{{ heroSliderImgMobile3 | url }}"
+          alt="slide 2"
+          height="auto"
+        />
+      </picture>
+      <div class="home-credit">{{ heroSliderImgCredit3 }}</div>
+    </div>
+  </div>
+
+  <!-- slideshow arrows -->
+  <div id="vanilla-slideshow-previous">
+    <img src="{{ '/img/left-chevron.svg' | url }}" alt="slider arrow" />
+  </div>
+  <div id="vanilla-slideshow-next">
+    <img src="{{ '/img/right-chevron.svg' | url }}" alt="slider arrow" />
+  </div>
+  <div id="home_tagline">
+    <div class="tagline-text">
+      “These are among the world’s greatest dancers!”
+    </div>
+    <div class="tagline-credit">The New York Times</div>
+  </div>
+</div>
+{% endif %} {% if heroType == "video" %}
+<div class="hero-video">
+  <div class="hero-video--content">
+    <div class="hero-video--text homepage">Dr. Seshadri Iyengar</div>
+    <div class="hero-video--tagline">Dance is beyond "form" and "gender"</div>
+    <div class="hero-video--buttons">
+      <a href="/icfa">
+        <div class="hero-video--button --gold">
+          Iyengar Centre for Fine Arts
+        </div>
+      </a>
+      <a href="/upcoming-events">
+        <div class="hero-video--button --gold">Upcoming Events</div>
+      </a>
+    </div>
+  </div>
+  <div class="hero-misc--content">
+    <div class="hero-misc--top">
+      <img
+        src="https://res.cloudinary.com/driyengar/image/upload/v1628017308/1-Nataraja_jexplx.png"
+        alt="Statue of Nataraja"
+      />
+    </div>
+    <div class="hero-misc--bottom">
+      <div class="scroll-indicator">
+        <img
+          src="{{ '/img/scroll-indicator.png' | url }}"
+          alt="scroll direction indicator"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="volume-icon">
+    <i class="fas fa-volume-mute"></i>
+  </div>
+  <!-- <video src="{{ heroVideo }}" muted loop autoplay id="heroVideo"></video> -->
+  <video muted loop autoplay id="heroVideo">
+    <source id="webm_src" src="{{ heroVideo }}" type="video/webm" />
+    <source id="mp4_src" src="{{ heroVideoMP4 }}" type="video/mp4" />
+  </video>
+</div>
+
+<script>
+  var navBarDeskElem = document.getElementsByClassName("navbar")[1];
+  var heroVideo = document.getElementById("heroVideo");
+  var heroVideoContent = document.getElementsByClassName(
+    "hero-video--content"
+  )[0];
+  var heroVideoText = document.getElementsByClassName("hero-video--text")[0];
+  var heroVideoTagline = document.getElementsByClassName(
+    "hero-video--tagline"
+  )[0];
+  var heroVideoButtonList = document.getElementsByClassName(
+    "hero-video--buttons"
+  )[0];
+  var heroMiscContent =
+    document.getElementsByClassName("hero-misc--content")[0];
+  var w = window.innerWidth;
+
+  // Load corresponding banner video for window width
+  // Responsive banner video
+  if (w < 800) {
+    document.getElementById("mp4_src").src =
+      "https://res.cloudinary.com/driyengar/video/upload/v1630987787/homepage-banner-mobile_dwzllk.mp4";
+    document.getElementById("webm_src").src =
+      "https://res.cloudinary.com/driyengar/video/upload/v1630987787/homepage-banner-mobile_izef9x.webm";
+    heroVideo.load();
+  }
+
+  window.addEventListener(
+    "load",
+    function () {
+      if (heroVideoText) {
+        let tl = gsap.timeline();
+        tl.from(heroVideoContent, { autoAlpha: 0 });
+        // insert exactly 0 seconds from the start of the timeline
+        // it is delayed because of the loading of other content (images, YT videos) on the page
+        tl.fromTo(heroVideoText, { alpha: 0 }, { duration: 2, alpha: 1 }, 0);
+        if (heroVideoTagline) {
+          // insert at the END of the previous animation
+          tl.fromTo(
+            heroVideoTagline,
+            { y: -30, alpha: 0 },
+            { duration: 2, y: 0, alpha: 1 },
+            ">"
+          );
+        }
+        if (heroVideoButtonList) {
+          tl.fromTo(
+            heroVideoButtonList,
+            { alpha: 0 },
+            { duration: 1, alpha: 1 }
+          );
+        }
+
+        if (navBarDeskElem) {
+          // this solves the FOUC problem (flash of unstyled content)
+          tl.from(navBarDeskElem, { duration: 1, autoAlpha: 0 });
+        }
+        if (heroMiscContent) {
+          tl.from(heroMiscContent, { duration: 2, autoAlpha: 0 }, ">");
+        }
+      }
+    },
+    false
+  );
+</script>
+{% endif %}
+
+<main>
+  {{ content | safe }}
+</main>
+
+{% if heroType == "slider" %}
+<script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
+<script>
+  var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
+  if (vanillaSlideshow) {
+    vanillaSlideshow.init({
+      // auto slideshow, options: true or false
+      slideshow: true,
+      // slideshow delay
+      delay: 3000,
+      // display arrows, options: true or false
+      arrows: true,
+      // display indicators, options: true or false
+      indicators: false,
+      // start slideshow randomly, options: true or false
+      random: false,
+      // animation speed
+      animationSpeed: "1.75s",
+    });
+  }
+</script>
+{% endif %} {% if modals %}
+<script>
+  document.querySelectorAll(".open-modal").forEach((modalLink) => {
+    modalLink.addEventListener("click", (e) => {
+      // prevent normal click behavior
+      e.preventDefault();
+      const modalToggle = e.target.closest(".open-modal");
+      if (!modalToggle) return;
+
+      const modal = modalToggle.parentNode.nextElementSibling;
+      var heroContent = document.querySelector(".hero--content");
+      if (!heroContent)
+        heroContent = document.querySelector(".hero-video--content");
+
+      if (modal.classList.contains("modal--container")) {
+        modal.classList.add("is-open");
+        modal.style.animation = "modalFadeIn 500ms forwards";
+        heroContent.classList.add("is-hidden");
+        document.body.style.overflowY = "hidden";
+
+        const closeButton = modal.querySelector(".modal--close");
+        if (closeButton) {
+          closeButton.addEventListener("click", (_) => {
+            modal.classList.remove("is-open");
+            heroContent.classList.remove("is-hidden");
+            document.body.style.overflowY = "scroll";
+          });
+        }
+      }
+    });
+  });
+</script>
+{% endif %}
