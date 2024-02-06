@@ -1,106 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
 
-    <meta name="author" content="Dr. Seshadri Iyengar">
-    <meta name="title" content="{{ title }}">
-    <meta name="description" content="Dr. Seshadri Iyengar is a freelance, Neo-Classical Bharatnatyam dancer, teacher and choreographer, a Homoeopathic Physician and Yoga instructor based in Bangalore. As the Artistic Director of the Iyengar Centre for Fine Arts he conducts classes in Bharatanatyam and Yoga.">
+    <meta name="author"
+          content="Dr. Seshadri Iyengar">
+    <meta name="title"
+          content="{{ title }}">
+    <meta name="description"
+          content="Dr. Seshadri Iyengar is a freelance, Neo-Classical Bharatnatyam dancer, teacher and choreographer, a Homoeopathic Physician and Yoga instructor based in Bangalore. As the Artistic Director of the Iyengar Centre for Fine Arts he conducts classes in Bharatanatyam and Yoga.">
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="Dr. Seshadri Iyengar is a freelance, Neo-Classical Bharatnatyam dancer, teacher and choreographer, a Homoeopathic Physician and Yoga instructor based in Bangalore. As the Artistic Director of the Iyengar Centre for Fine Arts he conducts classes in Bharatanatyam and Yoga.">
-    <meta property="og:url" content="https://seshadriiyengardance.com">
-    <meta property="og:image" content="https://res.cloudinary.com/driyengar/image/upload/v1631268408/og-image_qs287k.jpg">
-    <meta property="og:image:alt" content="Iyengar Centre for Fine Arts">
+    <meta property="og:type"
+          content="website">
+    <meta property="og:locale"
+          content="en_US">
+    <meta property="og:title"
+          content="{{ title }}">
+    <meta property="og:description"
+          content="Dr. Seshadri Iyengar is a freelance, Neo-Classical Bharatnatyam dancer, teacher and choreographer, a Homoeopathic Physician and Yoga instructor based in Bangalore. As the Artistic Director of the Iyengar Centre for Fine Arts he conducts classes in Bharatanatyam and Yoga.">
+    <meta property="og:url"
+          content="https://seshadriiyengardance.com">
+    <meta property="og:image"
+          content="https://res.cloudinary.com/driyengar/image/upload/v1631268408/og-image_qs287k.jpg">
+    <meta property="og:image:alt"
+          content="Iyengar Centre for Fine Arts">
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://seshadriiyengardance.com">
-    <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:description" content="Dr. Seshadri Iyengar is a freelance, Neo-Classical Bharatnatyam dancer, teacher and choreographer, a Homoeopathic Physician and Yoga instructor based in Bangalore. As the Artistic Director of the Iyengar Centre for Fine Arts he conducts classes in Bharatanatyam and Yoga.">
-    <meta name="twitter:image" content="https://res.cloudinary.com/driyengar/image/upload/v1631268408/og-image_qs287k.jpg">
-    <meta name="twitter:image:alt" content="Iyengar Centre for Fine Arts">
-    <link rel="canonical" href="https://seshadriiyengardance.com">
+    <meta name="twitter:card"
+          content="summary_large_image">
+    <meta name="twitter:url"
+          content="https://seshadriiyengardance.com">
+    <meta name="twitter:title"
+          content="{{ title }}">
+    <meta name="twitter:description"
+          content="Dr. Seshadri Iyengar is a freelance, Neo-Classical Bharatnatyam dancer, teacher and choreographer, a Homoeopathic Physician and Yoga instructor based in Bangalore. As the Artistic Director of the Iyengar Centre for Fine Arts he conducts classes in Bharatanatyam and Yoga.">
+    <meta name="twitter:image"
+          content="https://res.cloudinary.com/driyengar/image/upload/v1631268408/og-image_qs287k.jpg">
+    <meta name="twitter:image:alt"
+          content="Iyengar Centre for Fine Arts">
+    <link rel="canonical"
+          href="https://seshadriiyengardance.com">
 
-    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" as="script">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" as="script">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;500;600&family=Tangerine&family=Vidaloka&display=swap"
-      rel="stylesheet"
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    {% if carousels %}
-      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="preconnect"
+          href="https://res.cloudinary.com"
+          crossorigin />
+    <link rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+          as="script">
+    <link rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"
+          as="script">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com" />
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;500;600&family=Tangerine&family=Vidaloka&display=swap"
+          rel="stylesheet"
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          {% if carousels %}
+          <link
+          rel="stylesheet"
+          href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     {% endif %}
 
     <!-- style.css -->
 
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    <link rel="stylesheet"
+          href="{{ '/css/style.css' | url }}" />
 
 
-    <link rel="shortcut icon" href="{{ '/img/favicon.png' | url }}" />
+    <link rel="shortcut icon"
+          href="{{ '/img/favicon.png' | url }}" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script src="{{ '/utils/modernizr-custom.js' | url }}"></script>
 
   </head>
+
   <body>
     <!-- TODO Have the full menu structure as a JSON file -->
     <nav>
       <div class="mobile">
-        <input type="checkbox" id="menu" />
+        <input type="checkbox"
+               id="menu" />
         {% if homePage %}
-          <div class="navbar">
+        <div class="navbar">
           {% else %}
-            <div class="navbar inner-page">
+          <div class="navbar inner-page">
             {% endif %}
             {% if homePage %}
-              <a href="/">
-                <div class="logo-box">
-                  <picture>
-                    <source
-                srcset="
-                https://res.cloudinary.com/driyengar/image/upload/v1509773872/website_images/icfa_logo_sml.jpg
-                "
-                type="image/jpeg"
-                    <img
-                src="https://res.cloudinary.com/driyengar/image/upload/v1509773872/website_images/icfa_logo_sml.jpg"
-                alt="Iyengar Centre for Fine Arts logo"
-                loading="lazy"
-                  </picture>
-                </div>
-              </a>
+            <a href="/">
+              <div class="logo-box">
+                <picture>
+                  <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1509773872/icfa_logo_sml.jpg"
+                          type="image/jpeg" />
+                  <img src="https://res.cloudinary.com/driyengar/image/upload/v1509773872/icfa_logo_sml.jpg"
+                       alt="Iyengar Centre for Fine Arts logo"
+                       loading="lazy" />
+                </picture>
+              </div>
+            </a>
             {% else %}
-              <a href="/">
-                <div class="logo-box">
-                  <picture>
-                    <source
-                  srcset="
-                  https://res.cloudinary.com/driyengar/image/upload/v1509773872/website_images/icfa_logo_sml.jpg
-                  "
-                  type="image/jpeg"
-                    <img
-                  src="https://res.cloudinary.com/driyengar/image/upload/v1509773872/website_images/icfa_logo_sml.jpg"
-                  alt="Iyengar Centre for Fine Arts logo"
-                  loading="lazy"
-                  </picture>
-                </div>
-              </a>
+            <a href="/">
+              <div class="logo-box">
+                <picture>
+                  <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1509773872/icfa_logo_sml.jpg"
+                          type="image/jpeg" />
+                  <img src="https://res.cloudinary.com/driyengar/image/upload/v1509773872/icfa_logo_sml.jpg"
+                       alt="Iyengar Centre for Fine Arts logo"
+                       loading="lazy" />
+                </picture>
+              </div>
+            </a>
             {% endif %}
-            <label for="menu" id="ham-icon-wrapper">
+            <label for="menu"
+                   id="ham-icon-wrapper">
               <div id="ham-icon"></div>
             </label>
           </div>
           <div class="mobile-menu-open">
-            <div class="multi-level" id="ml1">
+            <div class="multi-level"
+                 id="ml1">
               <div class="item">
                 <div class="label-plus">
                   <a href="/">Home</a>
@@ -123,7 +150,7 @@
               </div>
               <div class="item">
                 <div class="label-plus">
-                  <a href="/global-work">global work</a>
+                  <a href="/global-work">Global Work</a>
                 </div>
               </div>
               <div class="item">
@@ -132,10 +159,11 @@
                 </div>
               </div>
             </div>
-            <div class="multi-level" id="ml2">
+            <div class="multi-level"
+                 id="ml2">
               <div class="item">
                 <div class="label-plus">
-                  <a href="/profile">profile</a>
+                  <a href="/profile">Profile</a>
                 </div>
               </div>
               <div class="item">
@@ -162,62 +190,44 @@
             <div class="button-bars">
               <div class="button-bar">
                 <div class="button icon-img">
-                  <a href="https://www.facebook.com/Iyengar-Centre-for-FINE-ARTS-293774594468547" target="_blank">
+                  <a href="https://www.facebook.com/Iyengar-Centre-for-FINE-ARTS-293774594468547"
+                     target="_blank">
                     <picture>
-                      <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1630324119/facebook2_ggrypp.webp
-                      "
-                      type="image/webp"
-                      <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1631214190/facebook2_pajnu4.png
-                      "
-                      type="image/png"
-                      <img
-                      src="https://res.cloudinary.com/driyengar/image/upload/v1630324119/facebook2_ggrypp.webp"
-                      alt="Facebook Link"
-                      loading="lazy"
+                      <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1630324119/facebook2_ggrypp.webp"
+                              type="image/webp" />
+                      <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1631214190/facebook2_pajnu4.png"
+                              type="image/png" />
+                      <img src="https://res.cloudinary.com/driyengar/image/upload/v1630324119/facebook2_ggrypp.webp"
+                           alt="Facebook Link"
+                           loading="lazy" />
                     </picture>
                   </a>
                 </div>
                 <div class="button icon-img">
-                  <a href="https://www.instagram.com/icfabengaluru/" target="_blank">
+                  <a href="https://www.instagram.com/icfabengaluru/"
+                     target="_blank">
                     <picture>
-                      <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1630324119/insta2_desu5q.webp
-                      "
-                      type="image/webp"
-                      <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1631214191/insta2_yr8clx.png
-                      "
-                      type="image/png"
-                      <img
-                      src="https://res.cloudinary.com/driyengar/image/upload/v1630324119/insta2_desu5q.webp"
-                      alt="Instagram Link"
-                      loading="lazy"
+                      <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1630324119/insta2_desu5q.webp"
+                              type="image/webp" />
+                      <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1631214191/insta2_yr8clx.png"
+                              type="image/png" />
+                      <img src="https://res.cloudinary.com/driyengar/image/upload/v1630324119/insta2_desu5q.webp"
+                           alt="Instagram Link"
+                           loading="lazy" />
                     </picture>
                   </a>
                 </div>
                 <div class="button icon-img">
-                  <a href="https://www.youtube.com/channel/UCS54iy-nprfzdtoy_xOaHCw" target="_blank">
+                  <a href="https://www.youtube.com/channel/UCS54iy-nprfzdtoy_xOaHCw"
+                     target="_blank">
                     <picture>
-                      <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1630324120/youtube2_tkuk2c.webp
-                      "
-                      type="image/webp"
-                      <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1631214191/youtube2_zmoh5g.png
-                      "
-                      type="image/png"
-                      <img
-                      src="https://res.cloudinary.com/driyengar/image/upload/v1630324120/youtube2_tkuk2c.webp"
-                      alt="Youtube Link"
-                      loading="lazy"
+                      <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1630324120/youtube2_tkuk2c.webp"
+                              type="image/webp" />
+                      <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1631214191/youtube2_zmoh5g.png"
+                              type="image/png" />
+                      <img src="https://res.cloudinary.com/driyengar/image/upload/v1630324120/youtube2_tkuk2c.webp"
+                           alt="Youtube Link"
+                           loading="lazy" />
                     </picture>
                   </a>
                 </div>
@@ -227,46 +237,39 @@
         </div>
         <div class="desk">
           {% if homePage %}
-            <div class="navbar">
+          <div class="navbar">
             {% else %}
-              {% if noHero %}
-                <div class="navbar no-hero">
-                {% else %}
-                  <div class="navbar inner-page">
-                  {% endif %}
+            {% if noHero %}
+            <div class="navbar no-hero">
+              {% else %}
+              <div class="navbar inner-page">
+                {% endif %}
                 {% endif %}
                 {% if homePage %}
-                  <a href="/">
-                    <div class="logo-box">
-                      <picture>
-                        <source
-                srcset="
-                https://res.cloudinary.com/driyengar/image/upload/v1509773872/website_images/icfa_logo_sml.jpg
-                "
-                type="image/jpeg"
-                        <img
-                src="https://res.cloudinary.com/driyengar/image/upload/v1509773872/website_images/icfa_logo_sml.jpg"
-                alt="Iyengar Centre for Fine Arts logo"
-                loading="lazy"
-                      </picture>
-                    </div>
-                  </a>
+                <a href="/">
+                  <div class="logo-box">
+                    <picture>
+                      <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1509773872/icfa_logo_sml.jpg"
+                              type="image/jpeg" />
+                      <img src="https://res.cloudinary.com/driyengar/image/upload/v1509773872/icfa_logo_sml.jpg"
+                           alt="Iyengar Centre for Fine Arts logo"
+                           loading="lazy" />
+                    </picture>
+                  </div>
+                </a>
                 {% else %}
-                  <a href="/">
-                    <div class="logo-box">
-                      <picture>
-                        <source
-                srcset="
-                https://res.cloudinary.com/driyengar/image/upload/v1509773872/website_images/icfa_logo_sml.jpg
-                "
-                type="image/jpeg"
-                        <img
-                src="https://res.cloudinary.com/driyengar/image/upload/v1509773872/website_images/icfa_logo_sml.jpg"
-                alt="Iyengar Centre for Fine Arts logo"
-                loading="lazy"
-                      </picture>
-                    </div>
-                  </a>
+                <a href="/">
+                  <div class="logo-box">
+                    <picture>
+                      <source srcset="
+                      https://res.cloudinary.com/driyengar/image/upload/v1509773872/icfa_logo_sml.jpg"
+                              type="image/jpeg" />
+                      <img src="https://res.cloudinary.com/driyengar/image/upload/v1509773872/icfa_logo_sml.jpg"
+                           alt="Iyengar Centre for Fine Arts logo"
+                           loading="lazy" />
+                    </picture>
+                  </div>
+                </a>
                 {% endif %}
                 <div class="menu-groups">
                   <div class="multi-level">
@@ -274,7 +277,7 @@
                       <div class="item">
                         <div class="item-name">
                           <a href="/">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-home"></i>Home
                           </a>
                         </div>
                       </div>
@@ -295,7 +298,7 @@
                       </div>
                       <div class="item">
                         <div class="item-name">
-                          <a href="/global-work">global work</a>
+                          <a href="/global-work">Global Work</a>
                         </div>
                       </div>
 
@@ -308,7 +311,7 @@
                     <div class="menulevel-section">
                       <div class="item">
                         <div class="item-name">
-                          <a href="/profile">profile</a>
+                          <a href="/profile">Profile</a>
                         </div>
                       </div>
                       <div class="item">
@@ -335,62 +338,44 @@
                   </div>
                   <div class="button-bar">
                     <div class="button icon-img">
-                      <a href="https://www.facebook.com/Iyengar-Centre-for-FINE-ARTS-293774594468547" target="_blank">
+                      <a href="https://www.facebook.com/Iyengar-Centre-for-FINE-ARTS-293774594468547"
+                         target="_blank">
                         <picture>
-                          <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1630324119/facebook2_ggrypp.webp
-                      "
-                      type="image/webp"
-                          <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1631214190/facebook2_pajnu4.png
-                      "
-                      type="image/png"
-                          <img
-                      src="https://res.cloudinary.com/driyengar/image/upload/v1630324119/facebook2_ggrypp.webp"
-                      alt="Facebook Link"
-                      loading="lazy"
+                          <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1630324119/facebook2_ggrypp.webp"
+                                  type="image/webp" />
+                          <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1631214190/facebook2_pajnu4.png"
+                                  type="image/png" />
+                          <img src="https://res.cloudinary.com/driyengar/image/upload/v1630324119/facebook2_ggrypp.webp"
+                               alt="Facebook Link"
+                               loading="lazy" />
                         </picture>
                       </a>
                     </div>
                     <div class="button icon-img">
-                      <a href="https://www.instagram.com/icfabengaluru/" target="_blank">
+                      <a href="https://www.instagram.com/icfabengaluru/"
+                         target="_blank">
                         <picture>
-                          <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1630324119/insta2_desu5q.webp
-                      "
-                      type="image/webp"
-                          <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1631214191/insta2_yr8clx.png
-                      "
-                      type="image/png"
-                          <img
-                      src="https://res.cloudinary.com/driyengar/image/upload/v1630324119/insta2_desu5q.webp"
-                      alt="Instagram Link"
-                      loading="lazy"
+                          <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1630324119/insta2_desu5q.webp"
+                                  type="image/webp" />
+                          <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1631214191/insta2_yr8clx.png"
+                                  type="image/png" />
+                          <img src="https://res.cloudinary.com/driyengar/image/upload/v1630324119/insta2_desu5q.webp"
+                               alt="Instagram Link"
+                               loading="lazy" />
                         </picture>
                       </a>
                     </div>
                     <div class="button icon-img">
-                      <a href="https://www.youtube.com/channel/UCS54iy-nprfzdtoy_xOaHCw" target="_blank">
+                      <a href="https://www.youtube.com/channel/UCS54iy-nprfzdtoy_xOaHCw"
+                         target="_blank">
                         <picture>
-                          <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1630324120/youtube2_tkuk2c.webp
-                      "
-                      type="image/webp"
-                          <source
-                      srcset="
-                      https://res.cloudinary.com/driyengar/image/upload/v1631214191/youtube2_zmoh5g.png
-                      "
-                      type="image/png"
-                          <img
-                      src="https://res.cloudinary.com/driyengar/image/upload/v1630324120/youtube2_tkuk2c.webp"
-                      alt="Youtube Link"
-                      loading="lazy"
+                          <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1630324120/youtube2_tkuk2c.webp"
+                                  type="image/webp" />
+                          <source srcset="https://res.cloudinary.com/driyengar/image/upload/v1631214191/youtube2_zmoh5g.png"
+                                  type="image/png" />
+                          <img src="https://res.cloudinary.com/driyengar/image/upload/v1630324120/youtube2_tkuk2c.webp"
+                               alt="Youtube Link"
+                               loading="lazy" />
                         </picture>
                       </a>
                     </div>
@@ -398,290 +383,291 @@
                 </div>
               </div>
             </div>
-          </nav>
+    </nav>
 
-          {{ content | safe }}
+    {{ content | safe }}
 
-          <footer>
-            <div class="default-footer-content">
-              <div class="footer--section">
-                <div>
-                  <picture>
-                    <source
-                srcset="
+    <footer>
+      <div class="default-footer-content">
+        <div class="footer--section">
+          <div>
+            <picture>
+              <source srcset="
                 https://res.cloudinary.com/driyengar/image/upload/v1630347573/sri-sri_m8xgmi.png
                 "
-                type="image/png"
-                    <img
-                src="https://res.cloudinary.com/driyengar/image/upload/v1630347573/sri-sri_m8xgmi.png"
-                alt="Sri Sri Ravishankar"
-                loading="lazy"
-                  </picture>
-                </div>
-                <div class="contact-info">
-                  <div>
-                    <a href="mailto:icfabengaluru@gmail.com" class="link --white">
-                      <i class="far fa-envelope"></i> icfabengaluru@gmail.com
+                      type="image/png"
+                      <img
+                      src="https://res.cloudinary.com/driyengar/image/upload/v1630347573/sri-sri_m8xgmi.png"
+                      alt="Sri Sri Ravishankar"
+                      loading="lazy"
+                      </picture>
+          </div>
+          <div class="contact-info">
+            <div>
+              <a href="mailto:icfabengaluru@gmail.com"
+                 class="link --white">
+                <i class="far fa-envelope"></i> icfabengaluru@gmail.com
               </a>
-                  </div>
-                  <div>
-              Photo Credit: <a href="https://www.instagram.com/sathvik_traits_/" class="link --white" target="_blank">
-                      <i class="fab fa-instagram"></i> sathvik_traits_
+            </div>
+            <div>
+              Photo Credit: <a href="https://www.instagram.com/sathvik_traits_/"
+                 class="link --white"
+                 target="_blank">
+                <i class="fab fa-instagram"></i> sathvik_traits_
               </a>
-                  </div>
-                  <div>&#169;{% year %} Seshadri Iyengar, All Rights Reserved</div>
-                </div>
-              </div>
-              <div class="footer--section">
-                <picture>
-                  <source
-              srcset="
+            </div>
+            <div>&#169;{% year %} Seshadri Iyengar, All Rights Reserved</div>
+          </div>
+        </div>
+        <div class="footer--section">
+          <picture>
+            <source srcset="
               https://res.cloudinary.com/driyengar/image/upload/v1630417726/god-panel_blytpf.webp
               "
-              type="image/webp"
-                  <source
-              srcset="
+                    type="image/webp"
+                    <source
+                    srcset="
               https://res.cloudinary.com/driyengar/image/upload/v1631215009/god-panel_aboj9k.png
               "
-              type="image/png"
-                  <img
-              src="https://res.cloudinary.com/driyengar/image/upload/v1630417726/god-panel_blytpf.webp"
-              alt="A panel of Gods"
-              loading="lazy"
-                </picture>
-              </div>
-            </div>
-          </footer>
+                    type="image/png"
+                    <img
+                    src="https://res.cloudinary.com/driyengar/image/upload/v1630417726/god-panel_blytpf.webp"
+                    alt="A panel of Gods"
+                    loading="lazy"
+                    </picture>
+        </div>
+      </div>
+    </footer>
 
-          <div id="scroll-to-top" onclick="scrollToTop()">
-            <i class="fas fa-arrow-up"></i>
-            <div class="top-text">TOP</div>
-          </div>
+    <div id="scroll-to-top"
+         onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+      <div class="top-text">TOP</div>
+    </div>
 
-          <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
 
-          <script>
-            $(document).ready(function () {
-              if ($("#view_all").length) {
-                $("#view_all").click(function () {
-                  $(".old_events").slideToggle();
-                  $("#view_all").hide();
-                });
-              }
-            });
-          </script>
+    <script>
+      $(document).ready(function () {
+        if ($("#view_all").length) {
+          $("#view_all").click(function () {
+            $(".old_events").slideToggle();
+            $("#view_all").hide();
+          });
+        }
+      });
+    </script>
 
-          <script>
-            var logoImgMob = document.getElementsByClassName("logo-box")[0];
-            var logoImgDesk = document.getElementsByClassName("logo-box")[1];
-            var mobileElem = document.getElementsByClassName("mobile")[0];
-            var navElem = document.getElementsByTagName("nav")[0];
-            var navBarMobElem = document.getElementsByClassName("navbar")[0];
-            var navBarDeskElem = document.getElementsByClassName("navbar")[1];
-            var innerPage = document.getElementById("innerPage");
-            var navBarMobInnerPage = document.getElementsByClassName("inner-page")[0];
-            var hamMenuElem = document.getElementById("menu");
-            var hamIcon = document.getElementById("ham-icon");
-            var contentElem = document.getElementsByClassName("content")[0];
-            var heroImage = document.getElementsByClassName("hero-image")[0];
-            var heroSlider = document.getElementsByClassName("hero-slider")[0];
-            var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
-            const noHero = document.getElementById("noHero");
+    <script>
+      var logoImgMob = document.getElementsByClassName("logo-box")[ 0 ];
+      var logoImgDesk = document.getElementsByClassName("logo-box")[ 1 ];
+      var mobileElem = document.getElementsByClassName("mobile")[ 0 ];
+      var navElem = document.getElementsByTagName("nav")[ 0 ];
+      var navBarMobElem = document.getElementsByClassName("navbar")[ 0 ];
+      var navBarDeskElem = document.getElementsByClassName("navbar")[ 1 ];
+      var innerPage = document.getElementById("innerPage");
+      var navBarMobInnerPage = document.getElementsByClassName("inner-page")[ 0 ];
+      var hamMenuElem = document.getElementById("menu");
+      var hamIcon = document.getElementById("ham-icon");
+      var contentElem = document.getElementsByClassName("content")[ 0 ];
+      var heroImage = document.getElementsByClassName("hero-image")[ 0 ];
+      var heroSlider = document.getElementsByClassName("hero-slider")[ 0 ];
+      var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
+      const noHero = document.getElementById("noHero");
 
-            // When HOMEPAGE has a banner video
-            var heroVideo = document.getElementById("heroVideo");
-            var audioToggleElem = document.getElementsByClassName("volume-icon")[0];
+      // When HOMEPAGE has a banner video
+      var heroVideo = document.getElementById("heroVideo");
+      var audioToggleElem = document.getElementsByClassName("volume-icon")[ 0 ];
 
-            var ht = window.innerHeight;
-            var a_third_ht = ht * 0.33;
+      var ht = window.innerHeight;
+      var a_third_ht = ht * 0.33;
 
-            // Global variables
-            const navbar_bg_color_solid = "rgba(0, 0, 0, 1.0)";
-            var navbar_bg_color_trans = "rgba(0, 0, 0, 0)";
-            if (noHero) 
-              navbar_bg_color_trans = "rgba(0, 0, 0, 1.0)";
-            const navbar_bg_color_semitrans = "linear-gradient(to bottom, rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0))";
-            const navbar_height = "100px";
-            const navbar_height_onscroll = "70px";
-            const navbar_desk_height = "120px";
-            const navbar_desk_height_onscroll = "100px";
+      // Global variables
+      const navbar_bg_color_solid = "rgba(0, 0, 0, 1.0)";
+      var navbar_bg_color_trans = "rgba(0, 0, 0, 0)";
+      if (noHero)
+        navbar_bg_color_trans = "rgba(0, 0, 0, 1.0)";
+      const navbar_bg_color_semitrans = "linear-gradient(to bottom, rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0))";
+      const navbar_height = "100px";
+      const navbar_height_onscroll = "70px";
+      const navbar_desk_height = "120px";
+      const navbar_desk_height_onscroll = "100px";
 
-            window.scroll({behavior: "smooth"});
+      window.scroll({ behavior: "smooth" });
 
-            window.addEventListener("scroll", () => {
-              let fromTop = window.scrollY;
+      window.addEventListener("scroll", () => {
+        let fromTop = window.scrollY;
 
-              if (fromTop > 0) {
-                if (logoImgMob) {
-                  logoImgMob.style.width = "40px";
-                  logoImgMob.style.height = "40px";
-                }
-                if (logoImgDesk) {
-                  logoImgDesk.style.width = "70px";
-                  logoImgDesk.style.height = "70px";
-                }
-                navBarMobElem.style.height = navbar_height_onscroll;
-                navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
-                navBarDeskElem.style.height = navbar_desk_height_onscroll;
-                navBarDeskElem.style.backgroundColor = navbar_bg_color_solid;
+        if (fromTop > 0) {
+          if (logoImgMob) {
+            logoImgMob.style.width = "40px";
+            logoImgMob.style.height = "40px";
+          }
+          if (logoImgDesk) {
+            logoImgDesk.style.width = "70px";
+            logoImgDesk.style.height = "70px";
+          }
+          navBarMobElem.style.height = navbar_height_onscroll;
+          navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
+          navBarDeskElem.style.height = navbar_desk_height_onscroll;
+          navBarDeskElem.style.backgroundColor = navbar_bg_color_solid;
 
-                if (fromTop > a_third_ht) {
-                  if (heroVideo) {
-                    heroVideo.pause();
-                  }
-                }
-              }
+          if (fromTop > a_third_ht) {
+            if (heroVideo) {
+              heroVideo.pause();
+            }
+          }
+        }
 
-              if (fromTop < 1) {
-                if (!hamMenuElem.checked) {
-                  if (logoImgMob) {
-                    logoImgMob.style.width = "clamp(70px, 6vw, 120px)";
-                    logoImgMob.style.height = "clamp(70px, 6vw, 120px)";
-                  }
-                  if (logoImgDesk) {
-                    logoImgDesk.style.width = "clamp(70px, 6vw, 120px)";
-                    logoImgDesk.style.height = "clamp(70px, 6vw, 120px)";
-                  }
-                  navBarMobElem.style.height = navbar_height;
-                  navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
-                  navBarDeskElem.style.height = navbar_desk_height;
-                  navBarDeskElem.style.backgroundColor = navbar_bg_color_trans;
-                  if (innerPage) {
-                    navBarDeskElem.style.backgroundColor = navbar_bg_color_semitrans;
-                    navBarMobInnerPage.style.backgroundColor = navbar_bg_color_semitrans;
-                    navBarMobElem.style.backgroundColor = "transparent";
-                  }
-
-                  if (fromTop < a_third_ht) {
-                    if (heroVideo) {
-                      heroVideo.play();
-                    }
-                  }
-                }
-              }
-            });
-
-            hamMenuElem.addEventListener("click", () => {
-              let fromTop = window.scrollY;
-              if (hamMenuElem.checked) {
-                mobileElem.style.backgroundColor = navbar_bg_color_solid;
-                navBarMobElem.style.height = navbar_height;
-                if (logoImgMob) {
-                  logoImgMob.style.width = "40px";
-                  logoImgMob.style.height = "40px";
-                }
-                mobileElem.style.maxHeight = "100vh";
-                mobileElem.style.overflowY = "auto";
-                document.body.style.overflowY = "hidden";
-                if (heroVideo) {
-                  heroVideo.pause();
-                }
-                hamIcon
-                  .classList
-                  .toggle("ham-open");
-              } else {
-                mobileElem.style.backgroundColor = navbar_bg_color_trans;
-                if (innerPage) {
-                  mobileElem.style.background = navbar_bg_color_semitrans;
-                }
-                if (noHero) {
-                  mobileElem.style.backgroundColor = navbar_bg_color_solid;
-                }
-                if (logoImgMob) {
-                  if (fromTop < 1) {
-                    logoImgMob.style.width = "clamp(70px, 6vw, 120px)";
-                    logoImgMob.style.height = "clamp(70px, 6vw, 120px)";
-                  } else {
-                    logoImgMob.style.width = "40px";
-                    logoImgMob.style.height = "40px";
-                  }
-                }
-                navBarMobElem.style.height = navbar_height;
-                document.body.style.overflowY = "auto";
-                if (heroVideo) {
-                  heroVideo.play();
-                }
-                hamIcon
-                  .classList
-                  .toggle("ham-open");
-              }
-            });
-
-            if (audioToggleElem) {
-              audioToggleElem.addEventListener("click", () => {
-                if (heroVideo && heroVideo.muted) {
-                  audioToggleElem.innerHTML = "<i class='fas fa-volume-up'></i>";
-                } else {
-                  audioToggleElem.innerHTML = "<i class='fas fa-volume-mute'></i>";
-                }
-                heroVideo.muted = !heroVideo.muted;
-              });
+        if (fromTop < 1) {
+          if (!hamMenuElem.checked) {
+            if (logoImgMob) {
+              logoImgMob.style.width = "clamp(70px, 6vw, 120px)";
+              logoImgMob.style.height = "clamp(70px, 6vw, 120px)";
+            }
+            if (logoImgDesk) {
+              logoImgDesk.style.width = "clamp(70px, 6vw, 120px)";
+              logoImgDesk.style.height = "clamp(70px, 6vw, 120px)";
+            }
+            navBarMobElem.style.height = navbar_height;
+            navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
+            navBarDeskElem.style.height = navbar_desk_height;
+            navBarDeskElem.style.backgroundColor = navbar_bg_color_trans;
+            if (innerPage) {
+              navBarDeskElem.style.backgroundColor = navbar_bg_color_semitrans;
+              navBarMobInnerPage.style.backgroundColor = navbar_bg_color_semitrans;
+              navBarMobElem.style.backgroundColor = "transparent";
             }
 
-            if (ht > 799) {
-              if (heroImage) {
-                heroImage.style.marginTop = "-" + navbar_desk_height;
-              }
-
-              if (heroSlider) {
-                heroSlider.style.marginTop = "-" + navbar_desk_height;
+            if (fromTop < a_third_ht) {
+              if (heroVideo) {
+                heroVideo.play();
               }
             }
+          }
+        }
+      });
 
-            $(document).ready(function () {
-              // prevent download of images through mouse events
-              $("img").bind("contextmenu", function (e) {
-                return false;
-              });
-
-              // If the banner is NOT a video or it is an INNERPAGE, display the menubar right away
-              if (!heroVideo || innerPage) {
-                if (navBarDeskElem) 
-                  navBarDeskElem.style.visibility = "visible";
-                }
-              });
-
-            // GSAP ScrollTrigger for vertical-fixed elements
-            // and for scroll-to-the-top element
-            gsap.registerPlugin(ScrollTrigger);
-            const vert_fixed_elem_list = document.querySelectorAll(".vertical-fixed");
-            if (vert_fixed_elem_list) {
-              vert_fixed_elem_list.forEach(vf_elem => {
-                gsap.to(vf_elem, {
-                  display: "none",
-                  scrollTrigger: {
-                    trigger: "footer",
-                    end: () => `-=${document
-                      .querySelector("footer")
-                      .offsetHeight}`,
-                    toggleActions: "play reset play reset"
-                  }
-                })
-              });
+      hamMenuElem.addEventListener("click", () => {
+        let fromTop = window.scrollY;
+        if (hamMenuElem.checked) {
+          mobileElem.style.backgroundColor = navbar_bg_color_solid;
+          navBarMobElem.style.height = navbar_height;
+          if (logoImgMob) {
+            logoImgMob.style.width = "40px";
+            logoImgMob.style.height = "40px";
+          }
+          mobileElem.style.maxHeight = "100vh";
+          mobileElem.style.overflowY = "auto";
+          document.body.style.overflowY = "hidden";
+          if (heroVideo) {
+            heroVideo.pause();
+          }
+          hamIcon
+            .classList
+            .toggle("ham-open");
+        } else {
+          mobileElem.style.backgroundColor = navbar_bg_color_trans;
+          if (innerPage) {
+            mobileElem.style.background = navbar_bg_color_semitrans;
+          }
+          if (noHero) {
+            mobileElem.style.backgroundColor = navbar_bg_color_solid;
+          }
+          if (logoImgMob) {
+            if (fromTop < 1) {
+              logoImgMob.style.width = "clamp(70px, 6vw, 120px)";
+              logoImgMob.style.height = "clamp(70px, 6vw, 120px)";
+            } else {
+              logoImgMob.style.width = "40px";
+              logoImgMob.style.height = "40px";
             }
+          }
+          navBarMobElem.style.height = navbar_height;
+          document.body.style.overflowY = "auto";
+          if (heroVideo) {
+            heroVideo.play();
+          }
+          hamIcon
+            .classList
+            .toggle("ham-open");
+        }
+      });
 
-            const scroll_top_elem = document.querySelector("#scroll-to-top");
-            if (scroll_top_elem) {
-              gsap.to(scroll_top_elem, {
-                display: "block",
-                scrollTrigger: {
-                  trigger: "main",
-                  toggleActions: "play reset play reset"
-                }
-              });
-            }
+      if (audioToggleElem) {
+        audioToggleElem.addEventListener("click", () => {
+          if (heroVideo && heroVideo.muted) {
+            audioToggleElem.innerHTML = "<i class='fas fa-volume-up'></i>";
+          } else {
+            audioToggleElem.innerHTML = "<i class='fas fa-volume-mute'></i>";
+          }
+          heroVideo.muted = !heroVideo.muted;
+        });
+      }
 
-            function scrollToTop() {
-              //scroll to 0 pixels down from the top
-              gsap.to(window, {
-                duration: 1,
-                scrollTo: 0
-              });
+      if (ht > 799) {
+        if (heroImage) {
+          heroImage.style.marginTop = "-" + navbar_desk_height;
+        }
+
+        if (heroSlider) {
+          heroSlider.style.marginTop = "-" + navbar_desk_height;
+        }
+      }
+
+      $(document).ready(function () {
+        // prevent download of images through mouse events
+        $("img").bind("contextmenu", function (e) {
+          return false;
+        });
+
+        // If the banner is NOT a video or it is an INNERPAGE, display the menubar right away
+        if (!heroVideo || innerPage) {
+          if (navBarDeskElem)
+            navBarDeskElem.style.visibility = "visible";
+        }
+      });
+
+      // GSAP ScrollTrigger for vertical-fixed elements
+      // and for scroll-to-the-top element
+      gsap.registerPlugin(ScrollTrigger);
+      const vert_fixed_elem_list = document.querySelectorAll(".vertical-fixed");
+      if (vert_fixed_elem_list) {
+        vert_fixed_elem_list.forEach(vf_elem => {
+          gsap.to(vf_elem, {
+            display: "none",
+            scrollTrigger: {
+              trigger: "footer",
+              end: () => `-=${document
+                .querySelector("footer")
+                .offsetHeight}`,
+              toggleActions: "play reset play reset"
             }
-          </script>
-        </body>
-      </html>
+          })
+        });
+      }
+
+      const scroll_top_elem = document.querySelector("#scroll-to-top");
+      if (scroll_top_elem) {
+        gsap.to(scroll_top_elem, {
+          display: "block",
+          scrollTrigger: {
+            trigger: "main",
+            toggleActions: "play reset play reset"
+          }
+        });
+      }
+
+      function scrollToTop() {
+        //scroll to 0 pixels down from the top
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: 0
+        });
+      }
+    </script>
+  </body>
+
+</html>
